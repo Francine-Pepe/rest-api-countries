@@ -1,10 +1,12 @@
 import "./Styles/styles.sass";
 import Navbar from "./Components/Navbar";
+import MainContent from "./Components/MainContent";
 
 function App() {
   return (
     <>
       <Navbar />
+      <MainContent />
     </>
   );
 }
