@@ -1,7 +1,10 @@
 @use 'variables'
 
-@mixin nav-container
+@mixin full-container
     width: 100vw
+    height: 100vh
+
+@mixin nav-container
     height: 5rem
 
 @mixin button
@@ -34,9 +37,20 @@
     align-items: center
     padding: 0 2rem
 
-@mixin dark-mode
-    .navbar-container 
+@mixin dark
+    .navbar-container, .dark button
+        background-color: variables.$dark-mode-elements
+        color: variables.$dark-mode-text
+
+    .main_container
         background-color: variables.$dark-mode-background
         color: variables.$dark-mode-text
+
+@mixin light
+    .navbar-container
+        // .light button
+        //     background-color: variables.$light-mode-background
+        //     color: variables.$light-mode-text
+
 
 
