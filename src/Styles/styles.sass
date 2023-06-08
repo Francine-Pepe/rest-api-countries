@@ -1,0 +1,28 @@
+@use 'variables'
+@use 'mixins'  
+
+body 
+  font: variables.$font-stack
+  color: variables.$light-mode-text
+  background-color: variables.$light-mode-background
+  padding: 0
+  margin: 0
+
+.navbar-container 
+  -webkit-box-shadow: 0px 9px 45px -4px rgba(227, 227, 227, 0.92)
+  box-shadow: 0px 9px 45px -4px rgba(227, 227, 227, 0.92)
+  font-family: variables.$font-stack
+  font-weight: variables.$font-weight-300
+  color: variables.$light-mode-text
+  background-color: variables.$light-mode-elements
+  @include mixins.flex-space-between  
+    
+.button-darkmode
+  background-color: transparent
+  font-weight: variables.$font-weight-600
+  @include mixins.button
+  
+.dark-mode
+  @include mixins.dark-mode
+
+  
