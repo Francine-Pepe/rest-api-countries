@@ -2,7 +2,7 @@
 
 @mixin full-container
     width: 100vw
-    height: 100vh
+    height: auto
 
 @mixin nav-container
     height: 5rem
@@ -18,9 +18,15 @@
     font-family: variables.$font-stack
     cursor: pointer
 
-@mixin card-container
-    width: 5rem
-    height: 8rem
+@mixin cards
+    width: 17rem
+    height: auto
+    border-radius: 5px
+
+@mixin flex-center
+    display: flex
+    align-items: center
+    justify-content: center
 
 @mixin flex-start
     display: flex
@@ -37,20 +43,38 @@
     align-items: center
     padding: 0 2rem
 
+@mixin flex-column
+    display: flex
+    flex-direction: flex-column
+
+@mixin flex-wrap
+    display: flex
+    flex-wrap: wrap
+
 @mixin dark
-    .navbar-container, .dark button
+    .navbar-container, .dark button, .cards
         background-color: variables.$dark-mode-elements
         color: variables.$dark-mode-text
 
     .main_container
         background-color: variables.$dark-mode-background
-        color: variables.$dark-mode-text
+        color: variables.$dark-mode-text  
+
+    .individual_card
+        box-shadow: none 
 
 @mixin light
-    .navbar-container
-        // .light button
-        //     background-color: variables.$light-mode-background
-        //     color: variables.$light-mode-text
+    .cards
+        background-color: variables.$light-mode-elements
+        color: variables.$light-mode-text
+
+@mixin shadow 
+    -webkit-box-shadow: 0px 9px 45px -4px rgba(227, 227, 227, 0.92)
+    box-shadow: 0px 9px 45px -4px rgba(227, 227, 227, 0.92)
+
+    
+
+
 
 
 

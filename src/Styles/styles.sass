@@ -8,13 +8,37 @@ body
   padding: 0
   margin: 0
 
+.individual_card 
+  width: 17rem
+  @include mixins.shadow
+
+
+  .flags
+    border-radius: 5px 5px 0 0
+    width: 17rem
+    height: 10rem
+    overflow: hidden
+    @include mixins.flex-center
+
+    img
+      min-width: 100%
+      min-height: 100%
+      width: auto
+      height: auto
+      background-size: cover
+      background-repeat: no-repeat
+      background-position: center
+      object-fit: cover
+      
+  h4, h5
+    padding-left: 1.5rem
+
 .navbar-container 
-  -webkit-box-shadow: 0px 9px 45px -4px rgba(227, 227, 227, 0.92)
-  box-shadow: 0px 9px 45px -4px rgba(227, 227, 227, 0.92)
   font-family: variables.$font-stack
   font-weight: variables.$font-weight-300
   color: variables.$light-mode-text
   background-color: variables.$light-mode-elements
+  @include mixins.shadow
   @include mixins.flex-space-between  
     
 .button-darkmode
@@ -28,5 +52,17 @@ body
 .light
   @include mixins.light
 
-.main_container
-  @include mixins.full-container
+.main_container, .cards_main_container
+  @include mixins.full-container 
+  font-family: variables.$font-stack
+  font-weight: variables.$font-weight-300
+
+.cards_main_container
+  @include mixins.flex-space-around
+  @include mixins.flex-wrap
+
+.cards 
+  margin: 3rem
+  @include mixins.cards
+  @include mixins.flex-column
+  
